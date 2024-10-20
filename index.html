@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Inventario de Equipos Biomédicos</title>
+</head>
+<body>
+    <h1>Inventario de Equipos Biomédicos</h1>
+    <form id="equipment-form">
+        <label for="article-number">Número de Artículo:</label>
+        <input type="text" id="article-number" required>
+
+        <label for="equipment">Equipo:</label>
+        <input type="text" id="equipment" required>
+
+        <label for="brand">Marca:</label>
+        <input type="text" id="brand" required>
+
+        <label for="model">Modelo:</label>
+        <input type="text" id="model" required>
+
+        <label for="serial">Serie:</label>
+        <input type="text" id="serial" required>
+
+        <label for="inventory">Inventario:</label>
+        <input type="text" id="inventory" required>
+
+        <label for="invima">Invima:</label>
+        <input type="text" id="invima" required>
+
+        <label for="risk">Riesgo:</label>
+        <input type="text" id="risk" required>
+
+        <label for="location">Ubicación:</label>
+        <input type="text" id="location" required>
+
+        <label for="image">Imagen:</label>
+        <input type="file" id="image" accept="image/*" required>
+
+        <button type="submit">Agregar Equipo</button>
+    </form>
+
+    <table id="equipment-table">
+    <thead>
+        <tr>
+            <th>Número de Artículo</th>
+            <th>Equipo</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Serie</th>
+            <th>Inventario</th>
+            <th>Invima</th>
+            <th>Riesgo</th>
+            <th>Ubicación</th>
+            <th>Imagen</th>
+            <th>Acciones</th> <!-- Nueva columna para acciones -->
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+    <script src="script.js"></script>
+</body>
+</html>

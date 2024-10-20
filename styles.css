@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: calc(100% - 22px); /* Ajustar para el padding y borde */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#equipment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#equipment-table th,
+#equipment-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#equipment-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+#equipment-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#equipment-table tr:hover {
+    background-color: #ddd;
+}
+
+#equipment-table img {
+    max-width: 100px; /* Limitar el tamaño de las imágenes */
+    max-height: 100px; /* Limitar el tamaño de las imágenes */
+    object-fit: cover; /* Mantener la proporción de la imagen */
+}
+/* Estilo para el contenedor principal */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%; /* Hacer la tabla ocupar todo el ancho */
+    border-collapse: collapse; /* Colapsar bordes */
+}
+
+th, td {
+    padding: 10px; /* Espaciado dentro de celdas */
+    border: 1px solid #ccc; /* Borde de celdas */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+img {
+    max-width: 100%; /* Hacer las imágenes responsivas */
+    height: auto; /* Mantener la proporción de la imagen */
+}
+
+/* Estilo para el formulario */
+form {
+    display: flex;
+    flex-direction: column; /* Disposición vertical */
+}
+
+/* Estilo para botones */
+button {
+    margin-top: 10px; /* Espaciado entre botones */
+    padding: 10px; /* Espaciado dentro del botón */
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color de texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor a puntero */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+}
+
+/* Responsividad en dispositivos móviles */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block; /* Hacer que cada celda ocupe una línea */
+    }
+
+    th {
+        display: none; /* Ocultar encabezados en móviles */
+    }
+
+    td {
+        text-align: right; /* Alinear texto a la derecha */
+        position: relative; /* Para posicionar etiquetas */
+        padding-left: 50%; /* Espacio para la etiqueta */
+    }
+
+    td:before {
+        content: attr(data-label); /* Mostrar etiqueta en celdas */
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px); /* Ancho de etiqueta */
+        white-space: nowrap; /* Evitar que se divida en líneas */
+        text-align: left; /* Alinear texto a la izquierda */
+    }
+}
